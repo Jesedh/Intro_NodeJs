@@ -4,18 +4,25 @@ let infoCursos = {
             id:1,
             titulo : "Aprende python",
             lenguaje : "python",
-            visitas : 23000,
+            visitas : 25000,
             nivel : "basico"
         },
         {
             id:2,
+            titulo : "inter - python",
+            lenguaje : "python",
+            visitas : 19000,
+            nivel : "intermedio"
+        },
+        {
+            id:3,
             titulo : "Aprende javascript",
             lenguaje : "javascript",
             visitas : 15000,
             nivel : "basico"
         },
         {
-            id:3,
+            id:4,
             titulo : "Aprende sql",
             lenguaje : "sql",
             visitas : 34000,
