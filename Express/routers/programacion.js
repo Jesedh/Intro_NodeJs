@@ -49,8 +49,41 @@ routerProgramacion.post("/", (req, res) => {
 });
 
 //// METODO PUT
-routerProgramacion.put("/", (req, res) => {
+routerProgramacion.put("/:id", (req, res) => {
+    let cursoModificado = req.body;
+    let id = req.params.id;
 
+    let indice = programacion.findIndex(curso => curso.id == id);
+
+    if(indice >= 0){
+        programacion[indice] = cursoModificado;
+    };
+
+    res.send(JSON.stringify(programacion));
+});
+
+//// METODO PATCH
+routerProgramacion.patch("/:id", (req, res) => {
+    const InfoModificada = req.body;
+    const id = req.params.id;
+    const indice = programacion.findIndex(curso => curso.id == id);
+
+    if(indice >= 0){
+        const cursoAModificar = programacion[indice];
+        Object.assign(cursoAModificar, InfoModificada);
+    };
+    res.send(JSON.stringify(programacion));
+});
+
+//// METODO DELETE
+routerProgramacion.delete("/:id", (req, res) => {
+    const id = req.params.id;
+    const indice = programacion.findIndex(curso => curso.id == id);
+    
+    if(indice >= 0){
+        programacion.splice(indice, 1);
+    };
+    res.send(JSON.stringify(programacion));
 });
 
 // exportar el modulo

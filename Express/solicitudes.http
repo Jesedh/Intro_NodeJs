@@ -8,3 +8,31 @@ Content-Type: application/json
     "visitas":76898,
     "nivel":"intermedio"
 }
+
+###
+
+PUT http://localhost:3000/api/cursos/programacion/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":2,
+    "titulo":"Python intermedio con proyectos",
+    "lenguaje":"python",
+    "visitas": 82767,
+    "nivel":"intermedio"
+}
+
+###
+
+PATCH http://localhost:3000/api/cursos/programacion/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo":"Python intermedio",
+    "visitas": 99999
+}
+
+###
+
+DELETE http://localhost:3000/api/cursos/programacion/2 HTTP/1.1
+Content-Type: application/json
