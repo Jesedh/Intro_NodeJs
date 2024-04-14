@@ -7,7 +7,7 @@ const programacion = baseDatos.infoCursos.programacion;
 
 const routerProgramacion = express.Router(); // creamos el router
 // Middleware o intermediario
-// para que nos permite trabajar con el body de la solicitud
+// para que nos permita trabajar con el body de la solicitud
 routerProgramacion.use(express.json());
 
 ////// METODO GET
